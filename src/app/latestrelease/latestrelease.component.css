@@ -1,0 +1,20 @@
+.section-title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    margin: 30px 0 20px 40px;
+}
+.container{
+    display: flex;
+    overflow-x: scroll;
+    margin: 0px 20px;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+img{
+    width: 150px;
+    margin: 0px 3px;
+
+}

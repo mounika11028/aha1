@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import { WatchinteluguandtandtamilService } from '../services/watchinteluguandtandtamil.service';
+
+@Component({
+  selector: 'app-watchinteluguandtamil',
+  templateUrl: './watchinteluguandtamil.component.html',
+  styleUrls: ['./watchinteluguandtamil.component.css']
+})
+export class WatchinteluguandtamilComponent {
+  images:any;
+    constructor(private service:WatchinteluguandtandtamilService) {}
+    ngOnInit() {
+      this.service.onsubmit().subscribe(data=>this.images=data);
+    }
+}
