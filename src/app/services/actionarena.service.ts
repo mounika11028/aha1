@@ -7,10 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ActionarenaService {
-  private baseurl="assets/actionarena.json";
-    private baseurl1="http://localhost:8081/api/v1/actionarena";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Actionarena[]>{
-      return this.http.get<Actionarena[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/actionarenadata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Actionarena[]>{
+    return this.http.get<Actionarena[]>(this.baseurl);
+  }
 }

@@ -7,10 +7,9 @@ import { Watchin4k } from '../models/watchin4k';
   providedIn: 'root'
 })
 export class Watchin4kService {
-  private baseurl="assets/watchin4k.json";
-    private baseurl1="http://localhost:8081/api/v1/watchin4k";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Watchin4k[]>{
-      return this.http.get<Watchin4k[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/watchin4kdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Watchin4k[]>{
+    return this.http.get<Watchin4k[]>(this.baseurl);
+  }
 }

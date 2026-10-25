@@ -8,8 +8,8 @@ import { LatestreleaseService } from '../services/latestrelease.service';
 })
 export class LatestreleaseComponent {
   images:any;
-  constructor(private service:LatestreleaseService) {}
-  ngOnInit() {
+  constructor(private service:LatestreleaseService){}
+  ngOnInit(){
     this.service.onsubmit().subscribe(data=>this.images=data);
   }
 }

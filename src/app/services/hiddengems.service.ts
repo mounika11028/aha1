@@ -7,10 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HiddengemsService {
-  private baseurl="assets/hiddengems.json";
-    private baseurl1="http://localhost:8081/api/v1/hiddengems";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Hiddengems[]>{
-      return this.http.get<Hiddengems[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/hiddengemsdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Hiddengems[]>{
+    return this.http.get<Hiddengems[]>(this.baseurl);
+  }
 }

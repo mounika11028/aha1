@@ -7,10 +7,9 @@ import { Highvoltage } from '../models/highvoltage';
   providedIn: 'root'
 })
 export class HighvoltageService {
-  private baseurl="assets/highvoltage.json";
-    private baseurl1="http://localhost:8081/api/v1/highvoltage";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Highvoltage[]>{
-      return this.http.get<Highvoltage[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/highvoltagedata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Highvoltage[]>{
+    return this.http.get<Highvoltage[]>(this.baseurl);
+  }
 }

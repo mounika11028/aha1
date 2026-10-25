@@ -7,10 +7,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RegionalmixService {
-  private baseurl="assets/regionalmix.json";
-    private baseurl1="http://localhost:8081/api/v1/regionalmix";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Regionalmix[]>{
-      return this.http.get<Regionalmix[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/regionalmixdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Regionalmix[]>{
+    return this.http.get<Regionalmix[]>(this.baseurl);
+  }
 }

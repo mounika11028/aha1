@@ -7,10 +7,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class KillertwistsService {
-  private baseurl="assets/killertwists.json";
-    private baseurl1="http://localhost:8081/api/v1/killertwists";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Killertwists[]>{
-      return this.http.get<Killertwists[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/killertwistsdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Killertwists[]>{
+    return this.http.get<Killertwists[]>(this.baseurl);
+  }
 }

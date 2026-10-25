@@ -7,10 +7,9 @@ import { Livechannels } from '../models/livechannels';
   providedIn: 'root'
 })
 export class LivechannelsService {
-  private baseurl="assets/livechannels.json";
-    private baseurl1="http://localhost:8081/api/v1/livechannels";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Livechannels[]>{
-      return this.http.get<Livechannels[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/livechannelsdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Livechannels[]>{
+    return this.http.get<Livechannels[]>(this.baseurl);
+  }
 }

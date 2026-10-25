@@ -7,10 +7,9 @@ import { Mostrewatchedgems } from '../models/mostrewatchedgems';
   providedIn: 'root'
 })
 export class MostrewatchedgemsService {
-  private baseurl="assets/mostrewatchedgems.json";
-    private baseurl1="http://localhost:8081/api/v1/mostrewatchedgems";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Mostrewatchedgems[]>{
-      return this.http.get<Mostrewatchedgems[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/mostrewatchedgemsdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Mostrewatchedgems[]>{
+    return this.http.get<Mostrewatchedgems[]>(this.baseurl);
+  }
 }

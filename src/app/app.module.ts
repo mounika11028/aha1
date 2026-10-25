@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LatestreleaseComponent } from './latestrelease/latestrelease.component';
 import { MollywoodmoodComponent } from './mollywoodmood/mollywoodmood.component';
 import { AhaoriginalsComponent } from './ahaoriginals/ahaoriginals.component';
 import { WatchforfreeComponent } from './watchforfree/watchforfree.component';
@@ -42,11 +41,11 @@ import { Watchin4kComponent } from './watchin4k/watchin4k.component';
 import { NavbarComponent } from './commoncomponents/navbar/navbar.component';
 import { FooterComponent } from './commoncomponents/footer/footer.component';
 import { NenenanineComponent } from './navigatingcomponent/nenenanine/nenenanine.component';
-import { FantasticfafaComponent } from './navigatingcomponent/fantasticfafa/fantasticfafa.component';
+import { LatestreleaseComponent } from './navigatingcomponent/latestrelease/latestrelease.component';
+import { CelebratingloveComponent } from './navigatingcomponent/celebratinglove/celebratinglove.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LatestreleaseComponent,
     MollywoodmoodComponent,
     AhaoriginalsComponent,
     WatchforfreeComponent,
@@ -85,7 +84,8 @@ import { FantasticfafaComponent } from './navigatingcomponent/fantasticfafa/fant
     NavbarComponent,
     FooterComponent,
     NenenanineComponent,
-    FantasticfafaComponent
+    LatestreleaseComponent,
+    CelebratingloveComponent
   ],
   imports: [
     BrowserModule,

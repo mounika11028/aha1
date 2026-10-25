@@ -7,10 +7,9 @@ import { Watchforfree } from '../models/watchforfree';
   providedIn: 'root'
 })
 export class WatchforfreeService {
-  private baseurl="assets/watchforfree.json";
-    private baseurl1="http://localhost:8081/api/v1/watchforfree";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Watchforfree[]>{
-      return this.http.get<Watchforfree[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/watchforfreedata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Watchforfree[]>{
+    return this.http.get<Watchforfree[]>(this.baseurl);
+  }
 }

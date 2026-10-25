@@ -7,10 +7,9 @@ import { Heartbeatstories } from '../models/heartbeatstories';
   providedIn: 'root'
 })
 export class HeartbeatstoriesService {
-  private baseurl="assets/heartbeatstories.json";
-    private baseurl1="http://localhost:8081/api/v1/heartbeatstories";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Heartbeatstories[]>{
-      return this.http.get<Heartbeatstories[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/heartbeatstoriesdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Heartbeatstories[]>{
+    return this.http.get<Heartbeatstories[]>(this.baseurl);
+  }
 }

@@ -7,10 +7,9 @@ import { Indieandfestivalfilms } from '../models/indieandfestivalfilms';
   providedIn: 'root'
 })
 export class IndieandfestivalfilmsService {
-  private baseurl="assets/indieandfestivalfilms.json";
-    private baseurl1="http://localhost:8081/api/v1/indieandfestivalfilms";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Indieandfestivalfilms[]>{
-      return this.http.get<Indieandfestivalfilms[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/indieandfestivalfilmsdata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Indieandfestivalfilms[]>{
+    return this.http.get<Indieandfestivalfilms[]>(this.baseurl);
+  }
 }

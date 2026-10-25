@@ -7,10 +7,9 @@ import { Watchinteluguandtamil } from '../models/watchinteluguandtamil';
   providedIn: 'root'
 })
 export class WatchinteluguandtandtamilService {
-  private baseurl="assets/watchinteluguandtamil.json";
-    private baseurl1="http://localhost:8081/api/v1/watchinteluguandtamil";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Watchinteluguandtamil[]>{
-      return this.http.get<Watchinteluguandtamil[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/watchinteluguandtamildata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Watchinteluguandtamil[]>{
+    return this.http.get<Watchinteluguandtamil[]>(this.baseurl);
+  }
 }

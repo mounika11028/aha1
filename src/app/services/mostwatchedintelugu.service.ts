@@ -7,10 +7,9 @@ import { Mostwatchedintelugu } from '../models/mostwatchedintelugu';
   providedIn: 'root'
 })
 export class MostwatchedinteluguService {
-  private baseurl="assets/mostwatchedintelugu.json";
-    private baseurl1="http://localhost:8081/api/v1/mostwatchedintelugu";
-    constructor(private http:HttpClient) {}
-    onsubmit():Observable<Mostwatchedintelugu[]>{
-      return this.http.get<Mostwatchedintelugu[]>(this.baseurl);
-    }
+  private baseurl="http://localhost:8081/api/v1/mostwatchedintelugudata";
+  constructor(private http:HttpClient) {}
+  onsubmit():Observable<Mostwatchedintelugu[]>{
+    return this.http.get<Mostwatchedintelugu[]>(this.baseurl);
+  }
 }
